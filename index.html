@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <main>
-        <form action="">
-            <input type="text" name="url" id="url-field" placeholder="Enter a URL">
-            <button>QR Code</button>
+    <main class="main__container">
+        <img
+            srcset="./assets/images/logo/logo-small.svg,
+                    ./assets/images/logo/logo.svg 640w"
+            src="./assets/images/logo/logo-small.svg"
+            class="main-logo"
+            alt="QR Code Scanner Logo">
+        <form action="" class="form">
+            <input
+                type="text"
+                name="url"
+                id="url-field"
+                class="url-field"
+                placeholder="Enter a URL"
+            >
+            <button id="qrcode-button" class="qrcode-button">QR Code</button>
         </form>
     </main>
 </body>
-<script src="./script.js"></script>
+<script src="./assets/js/script.js"></script>
 </html>

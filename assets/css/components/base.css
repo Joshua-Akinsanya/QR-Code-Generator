@@ -1,0 +1,40 @@
+:root {
+    --color-white-96: hsl(214, 37%, 96%);
+    --color-white-98: hsl(60, 9%, 98%);
+    --color-white-transparent: hsla(210, 40%, 98%, 0.102);
+    --color-black-05: hsl(231, 76%, 5%);
+    --color-primary-dark: hsl(229, 63%, 20%);
+    --color-primary: hsl(229, 63%, 41%);
+    --color-primary-light: hsl(229, 63%, 55%);
+
+    --border-radius: 1rem;
+
+    --box-shadow-primary: 0 0 0.75rem hsla(229, 63%, 41%, 0.5); /* Color base don primary*/
+}
+
+body {
+    font-family: 'Outfit';
+    min-height: 100vh;
+    min-height: 100dvh; /* For mobile */
+    background: url('../../images/bg/qa-bg-small.jpg');
+    display: grid;
+    place-items: center;
+}
+
+.main__container {
+    display: block;
+    padding-inline: 1rem;
+    width: 100%;
+}
+
+.main-logo {
+    display: block;
+    margin-inline: auto;
+}
+
+/* 640px -> 40rem */
+@media (min-width: 40rem) {
+    body {
+        background: url('../../images/bg/qa-bg.jpg');
+    }
+}

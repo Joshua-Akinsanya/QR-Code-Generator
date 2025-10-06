@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, input,
+img, div, button, form, fieldset, label
+{
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input, fieldset {
+  border: none;
+}
+
+input, select, option {
+  font: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+img, svg, video, picture {
+  max-width: 100%;
+  height: auto;
+}
