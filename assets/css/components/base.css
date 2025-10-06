@@ -3,6 +3,7 @@
     --color-white-98: hsl(60, 9%, 98%);
     --color-white-transparent: hsla(210, 40%, 98%, 0.102);
     --color-black-05: hsl(231, 76%, 5%);
+    --color-primary-dark-bg: hsl(229, 63%, 10%);
     --color-primary-dark: hsl(229, 63%, 20%);
     --color-primary: hsl(229, 63%, 41%);
     --color-primary-light: hsl(229, 63%, 55%);
@@ -14,6 +15,7 @@
 
 body {
     font-family: 'Outfit', 'Arial', sans-serif;
+    background-color: var(--color-primary-dark-bg);
     background-image: url('../../images/bg/qa-bg-small.jpg');
     background-position: center;
     background-repeat: no-repeat;

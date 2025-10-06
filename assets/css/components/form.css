@@ -24,9 +24,6 @@
 .url-field {
     background: none;
     color: var(--color-white-98);
-}
-
-.url-field {
     display: block;
     margin-left: 2rem;
     flex-grow: 1;

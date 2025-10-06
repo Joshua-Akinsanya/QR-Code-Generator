@@ -13,18 +13,18 @@
                 <source media="(max-width: 640px)" srcset="./assets/images/logo/logo-small.svg" />
                 <img src="./assets/images/logo/logo.svg" class="main-logo" alt="QR Code Scanner Logo" />
             </picture>
-            <form action="" class="form">
+            <form action="qrcode.html" method="get" class="form">
                 <input
                     type="text"
                     name="url"
                     id="url-field"
                     class="url-field"
                     placeholder="Enter a URL"
+                    required
                 >
-                <button id="qrcode-button" class="qrcode-button"><a href="./qrcode.html">QR Code</a></button>
+                <button id="qrcode-button" type="submit" class="qrcode-button"><span>QR Code</span></button>
             </form>
         </div>
     </main>
 </body>
-<script src="./assets/js/script.js"></script>
 </html>
