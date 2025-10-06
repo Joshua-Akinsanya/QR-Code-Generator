@@ -1,0 +1,35 @@
+.button-container {
+    margin-top: 4rem;
+    margin-inline: auto;
+    
+    display: flex;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+    max-width: fit-content;
+}
+
+.qrcode-button {
+    /* Make use of container query to  determine when to set flex-grow*/
+    background-color: var(--color-primary);
+    color: var(--color-white-98);
+    padding: 1em 2.5em;
+    border-radius: 0.75em;
+    cursor: pointer;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    transition: 0.25s ease;
+    transition-property: background;
+}
+.qrcode-button:hover,
+.qrcode-button:focus {
+    background-color: var(--color-primary-light);
+    box-shadow: var(--box-shadow-primary);
+}
+.qrcode-button * {
+    display: block;
+}

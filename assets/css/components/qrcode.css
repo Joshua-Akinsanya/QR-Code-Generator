@@ -1,0 +1,9 @@
+.qr-code {
+    display: block;
+    border-radius: 1rem;
+    margin-top: 6rem;
+    margin-inline: auto;
+    max-width: min(100%, 15.125rem); /* 242px */
+    aspect-ratio: 1;
+    background-color: var(--color-white-96);
+}

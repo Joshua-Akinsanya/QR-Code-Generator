@@ -15,12 +15,13 @@
     transition-property: border, box-shadow;
 }
 
-.form:hover {
+.form:hover,
+.form:has(:focus) {
     border-color: var(--color-primary-light);
     box-shadow: var(--box-shadow-primary);
 }
 
-.url-field, .qrcode-button {
+.url-field {
     background: none;
     color: var(--color-white-98);
 }
@@ -32,19 +33,4 @@
 }
 .url-field::placeholder {
     color: var(--color-white-98);
-}
-
-.qrcode-button {
-    /* Make use of container query to  determine when to set flex-grow*/
-    background-color: var(--color-primary);
-    padding: 1em 2.5em;
-    border-radius: 0.75em;
-    cursor: pointer;
-    flex-grow: 1;
-    transition: 0.25s ease;
-    transition-property: background;
-}
-.qrcode-button:hover {
-    background-color: var(--color-primary-light);
-    box-shadow: var(--box-shadow-primary);
 }

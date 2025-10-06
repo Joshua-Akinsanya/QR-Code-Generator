@@ -13,17 +13,23 @@
 }
 
 body {
-    font-family: 'Outfit';
-    min-height: 100vh;
-    min-height: 100dvh; /* For mobile */
-    background: url('../../images/bg/qa-bg-small.jpg');
-    display: grid;
-    place-items: center;
+    font-family: 'Outfit', 'Arial', sans-serif;
+    background-image: url('../../images/bg/qa-bg-small.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* moved min-height properties to main__container
+in order not set display flex on body */
 .main__container {
-    display: block;
     padding-inline: 1rem;
+    min-height: 100vh;
+    min-height: 100dvh; /* For mobile */
+    display: flex;
+    place-items: center;
+}
+.main__container div {
     width: 100%;
 }
 
@@ -32,8 +38,8 @@ body {
     margin-inline: auto;
 }
 
-/* 640px -> 40rem */
-@media (min-width: 40rem) {
+/* 1024px -> 64rem */
+@media (min-width: 64rem) {
     body {
         background: url('../../images/bg/qa-bg.jpg');
     }
