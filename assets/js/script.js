@@ -6,7 +6,3 @@ const qrCode = new QRCode(document.querySelector('#qrcode'), {
     width: 200,
     height: 200,
 });
-
-let p = document.createElement('p');
-p.textContent = urlParams;
-document.body.appendChild(p);

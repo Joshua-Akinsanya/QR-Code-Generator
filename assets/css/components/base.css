@@ -13,6 +13,10 @@
     --box-shadow-primary: 0 0 0.75rem hsla(229, 63%, 41%, 0.5); /* Color base don primary*/
 }
 
+*, *::before, *::after {
+    font-family: inherit;
+}
+
 body {
     font-family: 'Outfit', 'Arial', sans-serif;
     background-color: var(--color-primary-dark-bg);
