@@ -35,8 +35,9 @@ in order not set display flex on body */
     display: flex;
     place-items: center;
 }
-.main__container div {
+.main__container .wrapper {
     width: 100%;
+    margin-block: 2rem;
 }
 
 .main-logo {
@@ -47,6 +48,9 @@ in order not set display flex on body */
 /* 1024px -> 64rem */
 @media (min-width: 64rem) {
     body {
-        background: url('../../images/bg/qa-bg.jpg');
+        background-image: url('../../images/bg/qa-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

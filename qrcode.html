@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <main class="main__container">
-        <div class="">
-            <picture>
-                <source media="(max-width: 640px)" srcset="./assets/images/logo/logo-small.svg" />
-                <img src="./assets/images/logo/logo.svg" class="main-logo" alt="QR Code Scanner Logo" />
-            </picture>
+        <div class="wrapper">
+            <a href="./index.html" title="Home">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="./assets/images/logo/logo-small.svg" />
+                    <img src="./assets/images/logo/logo.svg" class="main-logo" alt="QR Code Scanner Logo" />
+                </picture>
+            </a>
             <div id="qrcode" class="qrcode-container">
 
             </div>
