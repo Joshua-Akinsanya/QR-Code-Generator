@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+  font: inherit;
   box-sizing: border-box;
 }
 
