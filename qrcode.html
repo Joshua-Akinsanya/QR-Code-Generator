@@ -9,7 +9,7 @@
 </head>
 <body>
     <main class="main__container">
-        <div class="wrapper">
+        <div class="center-content">
             <a href="./index.html" title="Home">
                 <picture>
                     <source media="(max-width: 640px)" srcset="./assets/images/logo/logo-small.svg" />
@@ -20,13 +20,16 @@
 
             </div>
             <div class="button-container">
-                <button class="qrcode-button">
-                    <a href="" download="">Download</a>
-                    <img src="./assets/images/icons/Load_circle_duotone.svg" alt="">
-                </button>
-                <button class="qrcode-button">
+                <!-- Download button: anchor receives the QR image href via script -->
+                <a id="download-link" class="qrcode-button" href="" download="qrcode.png">
+                    <span>Download</span>
+                    <img src="./assets/images/icons/Load_circle_duotone.svg" alt="download icon">
+                </a>
+
+                <!-- Share action: keep button semantics and an inner span for label -->
+                <button class="qrcode-button" type="button" id="share-button">
                     <span>Share</span>
-                    <img src="./assets/images/icons/link_alt.svg" alt="">
+                    <img src="./assets/images/icons/link_alt.svg" alt="share icon">
                 </button>
             </div>
         </div>

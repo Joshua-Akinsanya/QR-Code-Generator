@@ -35,7 +35,7 @@ in order not set display flex on body */
     display: flex;
     place-items: center;
 }
-.main__container .wrapper {
+.main__container .center-content {
     width: 100%;
     margin-block: 2rem;
 }
