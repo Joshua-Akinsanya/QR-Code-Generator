@@ -23,12 +23,17 @@
     gap: 1em;
 
     transition: 0.25s ease;
-    transition-property: background;
+    transition-property: background, transform;
 }
 .qrcode-button:hover,
 .qrcode-button:focus {
     background-color: var(--color-primary-light);
     box-shadow: var(--box-shadow-primary);
+}
+/* Put active after hover, focus to take effect */
+.qrcode-button:active {
+    transform: scale(0.9);
+    background-color: var(--color-primary-dark);
 }
 .qrcode-button * {
     display: block;

@@ -1,47 +1,36 @@
 const urlParams = new URLSearchParams(window.location.search);
-const url = urlParams.get('url');
-
-const downloadLink = document.querySelector('#download-link');
-
+const url = urlParams.get('url'); // perhaps i should change the variable name
 const qrCodeObj = new QRCode(document.querySelector('#qrcode'), {
     text: url,
     width: 200,
     height: 200,
 });
 
-async function downloadImage() {
-    const qrCodeCanvas = document.querySelector('#qrcode canvas');
-    const qrCodeImage = document.querySelector('#qrcode img');
+const downloadLink = document.querySelector('#download-link');
+const qrCodeCanvas = document.querySelector('#qrcode canvas');
+const qrCodeImage = document.querySelector('#qrcode img');
 
-    let blob;
+let blob = null;
+
+// Create Download Link if QR Code generated
+( async () => {
     if(qrCodeCanvas) {
         blob = await new Promise(resolve => qrCodeCanvas.toBlob(resolve));
-    } else if(qrCodeImage) {
-        const res = await fetch(qrCodeImage.src);
-        blob = await res.blob();
+    } else if (qrCodeImage) {
+        const image = await fetch(qrCodeImage.src);
+        blob = image.blob();
     } else {
         alert('QR Code not generated');
-        return;
     }
-    
-    downloadLink.href = URL.createObjectURL(blob);
-}
+
+    if (blob) {
+        downloadLink.href = URL.createObjectURL(blob);
+    }
+})();
 
 async function copyQRCodeToClipboard() {
-    const qrCodeCanvas = document.querySelector('#qrcode canvas');
-    const qrCodeImage = document.querySelector('#qrcode img');
-
-    let blob;
-    if(qrCodeCanvas) {
-        blob = await new Promise(resolve => qrCodeCanvas.toBlob(resolve));
-    } else if(qrCodeImage) {
-        const res = await fetch(qrCodeImage.src);
-        blob = await res.blob();
-    } else {
-        alert('QR Code not generated');
-        return;
-    }
-
+    if(!blob) return;
+    
     try {
         await navigator.clipboard.write([
             new ClipboardItem({[blob.type]: blob})
@@ -53,8 +42,6 @@ async function copyQRCodeToClipboard() {
 }
 
 const shareButton = document.querySelector('#share-button');
-shareButton.addEventListener('click', () => {
+shareButton.addEventListener('click', function () {
     copyQRCodeToClipboard();
 });
-
-downloadImage();
